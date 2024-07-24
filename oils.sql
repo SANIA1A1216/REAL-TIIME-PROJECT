@@ -1,0 +1,10 @@
+CREATE TABLE oils(id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(255) NOT NULL,image_url VARCHAR(255) NOT NULL,price INT NOT NULL,quantity INT NOT NULL,delivery_date DATE NOT NULL);
+select * from oils;
+INSERT INTO oils(name, image_url, price, quantity, delivery_date)VALUES ('Parachute Advansed Baby Massage Oil 400 Ml', 'https://m.media-amazon.com/images/I/61CqnrqJaiL._SX522_.jpg', 376, 1, '2024-07-01');
+INSERT INTO oils(name, image_url, price, quantity, delivery_date)VALUES ('Johnsons Baby Oil  200ml', 'https://m.media-amazon.com/images/I/41je-BanIdL._SX679_.jpg', 210, 1, '2024-07-02');
+INSERT INTO oils(name, image_url, price, quantity, delivery_date)VALUES ('Himalaya Baby Massage Oil (200ml, White)', 'https://m.media-amazon.com/images/I/4130rwexaeL._SX679_.jpg', 207, 1, '2024-07-03');
+INSERT INTO oils(name, image_url, price, quantity, delivery_date)VALUES ('Dabur Baby Oil: Non - Sticky Baby Massage Oil -500ml', 'https://m.media-amazon.com/images/I/71yJ3xGWMJL._SX679_.jpg', 237, 1, '2024-07-02');
+INSERT INTO oils(name, image_url, price, quantity, delivery_date)VALUES ('Figaro Baby Massage Oil -400ml', 'https://m.media-amazon.com/images/I/71hEQVJ2UzL._SX522_.jpg', 487, 1, '2024-07-01');
+INSERT INTO oils(name, image_url, price, quantity, delivery_date)VALUES ('Himalaya Face Body Oil Baby Massage Oil For All Skin Types (500 ML)', 'https://m.media-amazon.com/images/I/416hnTo9GRL._SX679_.jpg', 372, 1, '2024-07-03');
+INSERT INTO oils(name, image_url, price, quantity, delivery_date)VALUES ('Blue Nectar Ayurvedic Baby Oil with Organic Ghee-100ml', 'https://m.media-amazon.com/images/I/51710K5qOpL._SX679_.jpg', 555, 1, '2024-07-01');
+INSERT INTO oils(name, image_url, price, quantity, delivery_date)VALUES ('Mother Sparsh Cold Pressed Coconut Oil for Baby Massage-200ml', 'https://m.media-amazon.com/images/I/51UCx5R6W4L._SX679_.jpg', 274, 1, '2024-07-04');

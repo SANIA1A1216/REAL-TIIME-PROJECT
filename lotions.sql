@@ -1,0 +1,10 @@
+CREATE TABLE lotions(id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(255) NOT NULL,image_url VARCHAR(255) NOT NULL,price INT NOT NULL,quantity INT NOT NULL,delivery_date DATE NOT NULL);
+select * from lotions;
+INSERT INTO lotions(name, image_url, price, quantity, delivery_date)VALUES ('Himalaya Baby Lotion 700ml', 'https://m.media-amazon.com/images/I/61VWVhvTqDL._SY879_.jpg', 366, 1, '2024-07-01');
+INSERT INTO lotions(name, image_url, price, quantity, delivery_date)VALUES ('Cetaphil Baby Daily Lotion, White 400 ml', 'https://m.media-amazon.com/images/I/51Fx6oQVdXL._SX679_.jpg', 806, 1, '2024-07-02');
+INSERT INTO lotions(name, image_url, price, quantity, delivery_date)VALUES ('Aveeno Baby Daily Moisture Lotion (227g)', 'https://m.media-amazon.com/images/I/517+U4wR2NL._SX679_.jpg', 792, 1, '2024-07-04');
+INSERT INTO lotions(name, image_url, price, quantity, delivery_date)VALUES ('Mother Sparsh Milky Soft Baby Lotion - 400ml ', 'https://m.media-amazon.com/images/I/61YJWV6jPzL._SX522_.jpg', 249, 1, '2024-07-03');
+INSERT INTO lotions(name, image_url, price, quantity, delivery_date)VALUES ('Chicco Baby Moments Body Lotion for Babies- 500ml ', 'https://m.media-amazon.com/images/I/61TiY48ezKL._SX679_.jpg', 449, 1, '2024-07-01');
+INSERT INTO lotions(name, image_url, price, quantity, delivery_date)VALUES ('DABUR Sensitive Skin Baby Lotion - 500 ml ', 'https://m.media-amazon.com/images/I/71wVdxKcPDL._SX679_.jpg', 187, 1, '2024-07-02');
+INSERT INTO lotions(name, image_url, price, quantity, delivery_date)VALUES ('Mustela Hydra Bebe Body Lotion - Nourishing Baby Skincare, 300ml', 'https://m.media-amazon.com/images/I/51aa96BeYBS._SX522_.jpg', 1199, 1, '2024-07-03');
+INSERT INTO lotions(name, image_url, price, quantity, delivery_date)VALUES ('Sebamed Baby Body Lotion 100 ml|Ph 5.5|Camomile & Allantoin| Dermatalogically tested', 'https://m.media-amazon.com/images/I/71P3Ng0ctpL._SX679_.jpg', 484, 1, '2024-07-01');

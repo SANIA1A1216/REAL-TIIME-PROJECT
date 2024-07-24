@@ -1,0 +1,10 @@
+CREATE TABLE nipples(id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(255) NOT NULL,image_url VARCHAR(255) NOT NULL,price INT NOT NULL,quantity INT NOT NULL,delivery_date DATE NOT NULL);
+INSERT INTO nipples(name, image_url, price, quantity, delivery_date)VALUES ('BitFeex silicone food fruit nibbler with extra mesh soft pacifier', 'https://cdn.fcglcdn.com/brainbees/images/products/438x531/15843057a.webp', 179, 1, '2024-07-02');
+INSERT INTO nipples(name, image_url, price, quantity, delivery_date)VALUES ('Babyhug Silicone Pacifier With Sterilizer Case Pack of 2', 'https://cdn.fcglcdn.com/brainbees/images/products/438x531/3576067a.webp', 225, 1, '2024-07-03');
+INSERT INTO nipples(name, image_url, price, quantity, delivery_date)VALUES ('Babyhug Full Silicone Orthodontic Soother With Cover', 'https://cdn.fcglcdn.com/brainbees/images/products/438x531/1281702a.webp', 143, 1, '2024-07-01');
+INSERT INTO nipples(name, image_url, price, quantity, delivery_date)VALUES ('Small Wonder Soother With Liquid Silicone Bulb ', 'https://cdn.fcglcdn.com/brainbees/images/products/438x531/685033a.webp', 60, 1, '2024-07-04');
+INSERT INTO nipples(name, image_url, price, quantity, delivery_date)VALUES ('BIBS Supreme Pacifier - Brown ', 'https://cdn.fcglcdn.com/brainbees/images/products/438x531/14705057a.webp', 690, 1, '2024-07-01');
+INSERT INTO nipples(name, image_url, price, quantity, delivery_date)VALUES ('RCADE TOYS Nibble Pacifier Education Musical Simulation Bottle ', 'https://cdn.fcglcdn.com/brainbees/images/products/438x531/15835330a.webp', 634, 1, '2024-07-02');
+INSERT INTO nipples(name, image_url, price, quantity, delivery_date)VALUES ('Pacifiers With Cover ', 'https://cdn.fcglcdn.com/brainbees/images/products/438x531/10935490b.webp', 234, 1, '2024-07-04');
+INSERT INTO nipples(name, image_url, price, quantity, delivery_date)VALUES ('Krysaliis Sterling Silver Baby Pacifier - Silver ', 'https://cdn.fcglcdn.com/brainbees/images/products/438x531/11309096a.webp', 3600, 1, '2024-07-01');
+select * from nipples;

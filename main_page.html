@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Bloom</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            width: 100%;
+            background: linear-gradient(to left, #ffccff, #99ccff); /* Gradient colors */
+            overflow: hidden;
+        }
+        .navbar-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 40px;
+            background-color: #fdfcfc;
+            color: #104c91;
+        }
+        .logo img {
+            height: 40px;
+        }
+        .search-bar {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+        }
+        .search-bar input {
+            width: 50%; /* Shortened the width */
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        .search-bar button {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-left: 0;
+            background-color: #ddd;
+            border-radius: 0 4px 4px 0;
+        }
+        .delivery-location button {
+            background-color: #efc9af;
+            border: 1px solid #1f8ac0;
+            padding: 10px 20px;
+            border-radius: 4px;
+            color: #1f8ac0;
+        }
+        .user-icons {
+            display: flex;
+            align-items: center;
+        }
+        .user-icons button {
+            background-color: #88b7ee;
+            border: none;
+            margin-left: 10px;
+            font-size: 20px;
+            color: #f2f2f2;
+            position: relative;
+        }
+        .user-icons .icon-badge {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: rgb(73, 67, 67);
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            font-size: 12px;
+        }
+        .user-icons .icon-badge:empty {
+            display: none;
+        }
+        .navbar-bottom {
+            background-color: #6783D9;
+        }
+        .navbar-bottom a {
+            float: left;
+            display: block;
+            color: #131313;
+            text-align: center;
+            padding: 14px 18px;
+            text-decoration: none;
+        }
+        .navbar-bottom a:hover {
+            background-color: #ddd;
+            color: rgb(63, 55, 62);
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 18px;  
+            border: none;
+            outline: none;
+            color: rgb(154, 58, 174);
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: Comic Sans MS;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 960px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 8px;
+        }
+        .dropdown-content .column {
+            float: left;
+            width: 16.66%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .dropdown-content .column h3 {
+            margin-top: 0;
+        }
+        .dropdown-content .column a {
+            float: none;
+            color: rgb(15, 14, 15);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content .column a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .nested-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .nested-dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            padding: 12px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+            cursor: pointer;
+        }
+        .nested-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            left: 100%;
+            top: 0;
+        }
+        .nested-dropdown-content button {
+            color: rgb(15, 14, 15);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            text-align: left;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+        .nested-dropdown-content button:hover {
+            background-color: #ddd;
+        }
+        .nested-dropdown:hover .nested-dropdown-content {
+            display: block;
+        }
+        .image-wrapper {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 10px; 
+            height: auto; 
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .image-wrapper img {
+            width: 100%; 
+            height: auto; 
+            border-radius: 10px;
+         }
+Styles lo ee code insert cheyandi
+    </style>
+</head>
+<body>
+   
+    </header>
+
+    <main>
+        
+    <script>
+        function openNewWindow() {
+            window.open("cakes.html#all-cakes", "_blank");
+        }
+    </script>
+    
+</body>
+<div>
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eaeaea;
+    overflow: auto; /* Ensure this is set */
+}
+
+.container {
+    position: absolute;
+    top: 70%; /* Adjust as needed */
+    left: 35%;
+    width: 900px;
+    height: 500px;
+    background: #f5f5f5;
+    box-shadow: 0 30px 50px #dbdbdb;
+    /* Remove transform: translate(-50%, -50%); */
+    /* Add margin to center */
+    margin-top: -300px; /* Half of container height */
+    margin-left: -500px; /* Half of container width */
+}
+
+
+
+.container .slide .item {
+    width: 200px;
+    height: 300px;
+    position: right;
+    top: 30%;
+   
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+    
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(3) {
+    left: calc(50% + 220px);
+}
+
+.slide .item:nth-child(4) {
+    left: calc(50% + 420px);
+}
+
+.slide .item:nth-child(5) {
+    left: calc(50% + 440px);
+    opacity: 0;
+    
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #091e01;
+    transform: translate(0,-50%);
+
+    font-family: system-ui;
+    display:none;
+}
+
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+
+}
+.content button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.button {
+   width: 100%;
+   text-align: center;
+   position: absolute;
+   bottom: 20px;
+
+}
+
+.button button{
+    width: 50px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background-color: #0f0a0a;
+    color: #fff; 
+}
+
+.container .slide .item {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+   
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+    
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide .item:nth-child(3) {
+    left: calc(70% + 300px);
+}
+
+.slide .item:nth-child(4) {
+    left: calc(70% + 540px);
+    
+}
+
+.slide .item:nth-child(5) {
+    left: calc(70% + 460px);
+   opacity: 0;
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+
+.item .content {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #091e01;
+    transform: translate(0,-50%);
+
+    font-family: system-ui;
+    display:none;
+}
+
+.slide .item:nth-child(2) .content {
+    display: block;
+}
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+
+}
+.content button {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate {
+    from {
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+.button {
+   width: 100%;
+   text-align: center;
+   position: absolute;
+   bottom: 20px;
+
+}
+
+.button button{
+    width: 50px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background-color: #0f0a0a;
+    color: #fff; 
+}
+ 
+
+</style>
+</head>
+<body>
+<header class="navbar">
+        <div class="navbar-top">
+            <div class="logo">
+                <img src="logo_1.jpeg" alt="Logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for gifts">
+                <button>🔍</button>
+            </div>
+            <div class="delivery-location">
+                <a href="delivery_loc_1.jsp"><button>Delivery Location</button></a>
+            </div>
+            <div class="user-icons">
+                <a href=""><button>👤</button></a>
+                <a href="wishlist.jsp"><button>💖<span class="icon-badge"></span></button></a>
+                <a href="cart.jsp"><button>🛒<span class="icon-badge"></span></button></a>
+            </div>
+        </div>
+    
+        <div class="navbar-bottom">
+            <a href="#express">Express</a>
+            <div class="dropdown">
+                <button class="dropbtn">Baby Bloom 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content clearfix">
+                    <div class="column">
+                        <h3>Dresses</h3>
+                        <div class="nested-dropdown">
+                            <button class="nested-dropbtn">Western</button>
+                            <div class="nested-dropdown-content">
+                                <button onclick="openNewWindow1()">Girls</button>
+                                <button onclick="openNewWindow2()">Boys</button>
+                            </div>
+                        </div>
+                        <div class="nested-dropdown">
+                            <button class="nested-dropbtn">Traditional</button>
+                            <div class="nested-dropdown-content">
+                                <button onclick="openNewWindow3()">Girls</button>
+                                <button onclick="openNewWindow4()">Boys</button>
+                            </div>
+                        </div>
+                        <div class="nested-dropdown">
+                            <button class="nested-dropbtn">Summers</button>
+                            <div class="nested-dropdown-content">
+                                <button onclick="openNewWindow5()">Girls</button>
+                                <button onclick="openNewWindow6()">Boys</button>
+                            </div>
+                        </div>
+                        <div class="nested-dropdown">
+                            <button class="nested-dropbtn">Winters</button>
+                            <div class="nested-dropdown-content">
+                                <button onclick="openNewWindow7()">Girls</button>
+                                <button onclick="openNewWindow8()">Boys</button>
+                            </div>
+                        </div>
+                        <div class="nested-dropdown">
+                            <button class="nested-dropbtn">Footwear</button>
+                            <div class="nested-dropdown-content">
+                                <button onclick="openNewWindow9()">Girls</button>
+                                <button onclick="openNewWindow10()">Boys</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h3>Toys</h3>
+                        <a href="#" onclick="openNewWindow11()">Remote</a>
+                        <a href="#" onclick="openNewWindow12()">Dolls</a>
+                        <a href="#" onclick="openNewWindow13()">Cars</a>
+                        <a href="#" onclick="openNewWindow14()">Soft Toys</a>
+                    </div>
+                    <div class="column">
+                        <h3>Skin care</h3>
+                        <a href="#" onclick="openNewWindow15()">Soaps</a>
+                        <a href="#" onclick="openNewWindow16()">Lotions</a>
+                        <a href="#" onclick="openNewWindow17()">Oils</a>
+                        <a href="#" onclick="openNewWindow18()">Shampoos</a>
+                    </div>
+                    <div class="column">
+                        <h3>Feeding</h3>
+                        <a href="#" onclick="openNewWindow19()">Bottles</a>
+                        <a href="#" onclick="openNewWindow20()">Nipples</a>
+                        <a href="#" onclick="openNewWindow21()">Spoons</a>
+                        <a href="#" onclick="openNewWindow22()">Bowls</a>
+                    </div>
+                    <div class="image-wrapper">
+                        <img src="baby_img.jpeg">
+                    </div>
+                </div>
+            </div> 
+            <a href="#flowers">Flowers</a>
+            <a href="#cakes">Cakes</a>
+            <a href="#plants">Plants</a>
+            <a href="#combos">Combos</a>
+            <a href="#personalized">Personalized</a>
+            <a href="#giftitems">Gift items</a>
+        </div>
+    </header>
+<div class="container">
+    <div class="slide">
+        <div class="item" style="background-image: url(https://5.imimg.com/data5/SELLER/Default/2023/6/320937137/SY/TX/DD/184101773/new-product.jpeg);">
+            <div class="content">
+
+                <div class="name"></div>
+                
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://ae01.alicdn.com/kf/S851b69e96ec0459598baae822612edc5Z/Summer-Baby-Girl-Dresses-Floral-Print-Square-Collar-Ruffles-Sleeveless-Baby-Dress-Headband-2-Pcs-Cute.jpg);">
+            <div class="content">
+                
+               
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://i.pinimg.com/originals/c2/04/b1/c204b19813c0d2f039ebc3b466bea75c.png);">
+            <div class="content">
+                <div class="name">Kids</div>
+                
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://www.deltachildren.com/cdn/shop/products/12900-2356_Gap-Carriage-Stroller_silo_016.jpg?v=1671052843);">
+            <div class="content">
+                
+               
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://staranddaisy.in/wp-content/uploads/2021/09/staranddaisy-premium-baby-rocker-with-automatic-swing-and-bluetooth-music-pink-160975.webp);">
+            <div class="content">
+
+               
+               
+            </div>
+        </div>
+        <div class="item" style="background-image: url(https://thumbs.dreamstime.com/z/beautiful-composition-hand-drawn-watercolor-baby-cradle-crib-air-baloons-flowers-stock-clip-art-illustration-233684588.jpg);">
+            <div class="content">
+                
+                
+            </div>
+        </div>
+    </div>
+    <div class="button">
+        <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+        <button class="next"><i class="fa-solid fa-arrow-right"></i></i></button>
+        </div>
+
+    <script>let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        // JavaScript (app.js or inline)
+        
+        
+        function openNewWindow() {
+            // Implement your logic to open new windows or handle click events
+            console.log("Clicked!"); // Example log
+        }
+        next.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item');
+            document.querySelector('.slide').appendChild(items[0]);
+        });
+        
+        prev.addEventListener('click', function(){
+            let items = document.querySelectorAll('.item');
+            document.querySelector('.slide').prepend(items[items.length - 1]);
+        });</script>
+    
+    
+    <script>
+        let slide = document.querySelector('.slide');
+        let items = document.querySelectorAll('.item');
+        let currentIndex = 0;
+        let totalItems = items.length;
+    
+        function nextSlide() {
+            slide.appendChild(items[currentIndex]);
+            currentIndex = (currentIndex + 1) % totalItems;
+        }
+    
+        // Automatically advance slide every 3 seconds (adjust as needed)
+        setInterval(nextSlide, 3000);
+        
+        function openNewWindow1() {
+            window.location.href = "westerngirls.jsp";
+        }
+        function openNewWindow2() {
+            window.location.href = "westernboys.jsp";
+        }
+        function openNewWindow3() {
+            window.location.href = "traditionalgirls.jsp";
+        }
+        function openNewWindow4() {
+            window.location.href = "traditionalboys.jsp";
+        }
+        function openNewWindow5() {
+            window.location.href = "summergirls.jsp";
+        }
+        function openNewWindow6() {
+            window.location.href = "summerboys.jsp";
+        }
+        function openNewWindow7() {
+            window.location.href = "wintergirls.jsp";
+        }
+        function openNewWindow8() {
+            window.location.href = "winterboys.jsp";
+        }
+        function openNewWindow9() {
+            window.location.href = "girlsfootwear.jsp";
+        }
+        function openNewWindow10() {
+            window.location.href = "boysfootwear.jsp";
+        }
+        function openNewWindow11() {
+            window.location.href = "remote.jsp";
+        }
+        function openNewWindow12() {
+            window.location.href = "dolls.jsp";
+        }
+        function openNewWindow13() {
+            window.location.href = "cars.jsp";
+        }
+        function openNewWindow14() {
+            window.location.href = "softtoys.jsp";
+        }
+        function openNewWindow15() {
+            window.location.href = "soaps.jsp";
+        }
+        function openNewWindow16() {
+            window.location.href = "lotions.jsp";
+        }
+        function openNewWindow17() {
+            window.location.href = "oils.jsp";
+        }
+        function openNewWindow18() {
+            window.location.href = "shampoos.jsp";
+        }
+        function openNewWindow19() {
+            window.location.href = "bottles.jsp";
+        }
+        function openNewWindow20() {
+            window.location.href = "nipples.jsp";
+        }
+        function openNewWindow21() {
+            window.location.href = "spoons.jsp";
+        }
+        function openNewWindow22() {
+            window.location.href = "bowls.jsp";
+        }
+
+    </script>
+    
+    </body>
+    </html>
+</body>
+</html>
